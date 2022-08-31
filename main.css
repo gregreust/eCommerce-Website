@@ -1,0 +1,19 @@
+intro {
+    background-image: url('UX-HTML-CSS/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg');
+    background-repeat: no-repeat;
+  }
+
+nav {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.nav ul {
+  display: inline-flex;
+  list-style: none;
+}
+
+
+footer{
+  background-color: darkorange;
+}  
