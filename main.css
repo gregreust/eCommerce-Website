@@ -1,11 +1,46 @@
-intro {
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-width: 60%;
+  font-weight: 400;
+}
+
+.intro {
     background-image: url('UX-HTML-CSS/earl-wilcox-y3W0CzO063w-unsplash-alt.jpg');
     background-repeat: no-repeat;
-  }
+    background-size: cover;
+    color: white;
+    font-size: xx-large;
+    font-weight: 400;
+}
 
-nav {
+.intro .grid-container{
+  display:grid;
+  grid-template-columns: repeat(4, 25%);
+  grid-template-rows: 200px 200px;
+  justify-items: center;
+  align-items: center;
+}
+
+
+
+.nav {
   display: inline-flex;
+  position:relative;
   text-decoration: none;
+  align-items: center;
+  display: inline-flex;
+  align-content: stretch;
+  width:100%;
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  padding-inline: 2rem;
+  justify-content: space-between;
 }
 
 .nav ul {
@@ -13,7 +48,111 @@ nav {
   list-style: none;
 }
 
+.nav li{
+  margin-left: 1.5rem;
+}
 
+.nav a{
+  text-decoration: none;
+}
+
+
+.nav .rnav{
+  display: inline-flex;
+}
+
+
+.logo{
+  font-size: xx-large;
+  font-weight: 400;
+  display:flex;
+  align-items: center;
+}
+.logo img{
+  width: 35px;
+}
+
+.search-container{
+  padding-inline: 1rem;
+}
+
+.about{
+  margin-inline: 3rem;
+}
+
+.about .grid-container{
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  grid-template-rows: 25% 37% 37%;
+  grid-gap: 4rem;
+  padding-inline: 4rem;
+}
+
+.about .grid-item1{
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.about .grid-item3{
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+
+.about .flip{
+  transform: scaleX(-1);
+  width: 500px;
+}
+
+.about .grid-item4{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.about .grid-item4 img{
+  width:350px;
+}
+
+.about .grid-item5{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.products{
+  margin-inline: 3rem;
+}
+.products .container{
+ display:flex;
+ width: 90%;
+ flex-direction: row;
+ flex-wrap: wrap;
+ padding: 3rem;
+}
+
+.products .item{
+  width: 20rem;
+
+}
+
+.products .item img{
+  width: 250px;
+  height: 350px;
+}
+
+.contact{
+  margin-inline: 3rem;
+}
 footer{
   background-color: darkorange;
 }  
+
+footer a{
+  text-decoration: none;
+}
