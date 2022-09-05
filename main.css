@@ -3,17 +3,23 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+section{
+  padding-inline: 2rem;
+}
+
 h2 {
   border-bottom-width: 3px;
   border-bottom-style: solid;
-  border-width: 60%;
   font-weight: 400;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
 }
 
 h3 {
   border-bottom-width: 3px;
   border-bottom-style: solid;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .intro {
@@ -23,6 +29,7 @@ h3 {
     color: white;
     font-size: xx-large;
     font-weight: 400;
+    margin-top: 6rem;
 }
 
 .intro .grid-container{
@@ -37,7 +44,9 @@ h3 {
 
 .nav {
   display: inline-flex;
-  position:relative;
+  position:fixed;
+  top: 0;
+  overflow: hidden;
   text-decoration: none;
   align-items: center;
   display: inline-flex;
@@ -47,6 +56,7 @@ h3 {
   border-bottom-style: solid;
   padding-inline: 2rem;
   justify-content: space-between;
+  background-color: white;
 }
 
 .nav ul {
@@ -60,11 +70,14 @@ h3 {
 
 .nav a{
   text-decoration: none;
+  color:black;
 }
 
 
 .nav .rnav{
   display: inline-flex;
+  align-items: center;
+  margin-right: 2rem;
 }
 
 
@@ -79,7 +92,39 @@ h3 {
 }
 
 .search-container{
+  display:flex;
   padding-inline: 1rem;
+}
+
+.search-container form {
+  color: #555;
+  display: flex;
+  padding: 2px;
+  border: 1px solid currentColor;
+}
+
+.search-container button[type="submit"] {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+input[type="search"] {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
 }
 
 .about{
@@ -136,6 +181,7 @@ h3 {
 }
 .products .container{
  display:flex;
+ position: relative;
  width: 100%;
  padding-inline: 4rem;
  flex-direction: row;
@@ -162,15 +208,125 @@ h3 {
   padding: 8px 20px;
   font-size: larger;
   font-weight: 600;
+  margin-left: 2rem;
 }
 
-.contact{
-  margin-inline: 3rem;
+.products a{
+  color: darkorange;
 }
+
+.contact .container{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  
+}
+
+.contact form{
+  width: 75%;
+}
+
+.contact label{
+  font-size: larger;
+  letter-spacing: 1px;
+}
+
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid black; 
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+.send-container{
+  display:flex;
+  width:100%;
+  justify-content: flex-end;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  display:flex;
+  background-color: darkorange;
+  color: white;
+  border:0;
+  padding: 6px 24px;
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+
 footer{
   background-color: darkorange;
 }  
 
+footer .container{
+  display: grid;
+  padding-inline: 10rem;
+  padding-top: 1rem;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 50% 50%;
+  gap: 10px;
+  
+}
+
+footer .socialmedia img{
+  width:60px;
+}
+
+footer .logo img{
+  width:70px;
+  
+}
+
+footer .logo{
+  color: black;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
 footer a{
   text-decoration: none;
+}
+
+footer .tlfoot{
+  display:flex;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+footer .tmfoot{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+footer .trfoot{
+  display:flex;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+footer .brfoot{
+  text-align: right;
+}
+
+footer .img-spacer{
+  padding-inline:1rem;
+}
+
+footer .copywright{
+  display:flex;
+
+}
+
+footer .crinfo{
+  text-align:right;
+  padding-inline:2rem;
+  padding-bottom: 0.5rem;
 }
